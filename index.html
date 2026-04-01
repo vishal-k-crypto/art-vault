@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Vault</title>
+    <meta name="description" content="Explore world-class art from The Metropolitan Museum of Art's open collection.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Art Vault</h1>
+            <p>Explore the Met Collection</p>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for artworks...">
+            <button id="searchBtn">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="loader" class="loader hidden"></div>
+        <div id="errorMsg" class="error-message hidden"></div>
+        <div id="gallery" class="gallery"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
