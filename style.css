@@ -1,4 +1,6 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Base styling and layout */
 body {
     font-family: 'Outfit', sans-serif;
     background-color: #f8fafc;
@@ -7,6 +9,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* Header style with a neat glassmorphism blur effect */
 header {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(16px);
@@ -204,4 +208,82 @@ main {
     #searchBtn { padding: 1.25rem; }
     .gallery { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
     .card-image-wrapper { height: 260px; }
+    .controls-container { flex-direction: column; }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+
+body.dark-mode header {
+    background: rgba(15, 23, 42, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .card {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #f8fafc;
+}
+
+body.dark-mode .card-title {
+    color: #f8fafc;
+}
+
+body.dark-mode .card-dept {
+    background: #334155;
+    color: #cbd5e1;
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode #searchInput,
+body.dark-mode .control-input,
+body.dark-mode .control-select {
+    background: #1e293b;
+    color: #f8fafc;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Controls */
+.theme-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+body.dark-mode .theme-btn {
+    border-color: rgba(255,255,255,0.1);
+    color: #f8fafc;
+}
+
+.controls-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.5);
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+body.dark-mode .controls-container {
+    background: rgba(30,41,59,0.5);
+    border-color: rgba(255,255,255,0.05);
+}
+
+.control-input, .control-select {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    outline: none;
+    font-family: inherit;
+    flex: 1;
 }

@@ -4,28 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Vault</title>
+    <!-- Basic SEO & Meta tags -->
     <meta name="description" content="Explore world-class art from The Metropolitan Museum of Art's open collection.">
+    <!-- Link to our stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a nice clean look -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Top Header & Search Area -->
     <header>
         <div class="header-container">
             <h1>Art Vault</h1>
             <p>Explore the Met Collection</p>
+            <!-- Toggle button for dark/light mode -->
+            <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
         </div>
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Search for artworks...">
+            <!-- Main API search input -->
+            <input type="text" id="searchInput" placeholder="Search the Met collection...">
             <button id="searchBtn">Search</button>
         </div>
     </header>
 
     <main>
+        <!-- Milestone 3 Controls: Hidden by default until we fetch some art -->
+        <div class="controls-container hidden" id="controlsContainer">
+            <input type="text" id="localSearch" class="control-input" placeholder="Filter by title/artist...">
+            <select id="deptFilter" class="control-select">
+                <option value="all">All Departments</option>
+            </select>
+            <select id="sortYear" class="control-select">
+                <option value="default">Sort by Year</option>
+                <option value="asc">Oldest to Newest</option>
+                <option value="desc">Newest to Oldest</option>
+            </select>
+        </div>
+
+        <!-- Spinner to show when loading data -->
         <div id="loader" class="loader hidden"></div>
+        <!-- Error message display area -->
         <div id="errorMsg" class="error-message hidden"></div>
+        <!-- Grid container where all the artwork cards will go -->
         <div id="gallery" class="gallery"></div>
     </main>
 
+    <!-- Load our JS at the end so the DOM is ready -->
     <script src="script.js"></script>
 </body>
 </html>
