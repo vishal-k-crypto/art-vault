@@ -1,51 +1,112 @@
-# 🏛️ Art Vault
+<div align="center">
 
-**Live Demo:** [https://art-vault-gilt.vercel.app](https://art-vault-gilt.vercel.app)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:0d1117&height=200&section=header&text=Art%20Vault&fontSize=60&fontColor=58a6ff&animation=fadeIn&fontAlignY=35&desc=Explore%20The%20Met%20Collection%20%E2%80%94%20471%2C000%2B%20Artworks&descAlignY=55&descSize=18"/>
 
-Art Vault is a web application that lets you explore and discover 
-artworks from The Metropolitan Museum of Art's open collection of 
-over 471,000 pieces spanning 5,000 years of human history.
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://art-vault-gilt.vercel.app)
+[![Met Museum API](https://img.shields.io/badge/Met%20Museum%20API-Open%20Data-000000?style=for-the-badge)](https://metmuseum.github.io/)
 
-## Purpose
-To make world-class art accessible and explorable through an 
-interactive, filterable, and searchable interface — right in the browser.
+[🌐 Live Demo](https://art-vault-gilt.vercel.app) · [Met API Docs](https://metmuseum.github.io/)
 
-## API Used
-**The Metropolitan Museum of Art Collection API**  
-https://metmuseum.github.io/  
-Free and open access. No authentication or API key required.
+</div>
 
-## Features
+---
 
-### API Integration
-- Search artworks across the full Met collection by keyword
-- Display artwork cards with image, title, artist, department, and year
-- Batch fetch artwork details using Promise.all() for parallel requests
-- Loading indicator while data is being fetched
-- Responsive grid layout across mobile, tablet, and desktop
+## 🎯 What is Art Vault?
 
-### Core Features
-- Filter results by department (e.g. Egyptian Art, Modern Art, Asian Art)
-- Sort artworks by creation year (oldest to newest / newest to oldest)
-- Search within loaded results by title or artist name
-- Dark / Light mode toggle with saved preference via localStorage
+**Art Vault** is a lightweight, interactive web application that lets you explore and discover artworks from The Metropolitan Museum of Art's open collection — over **471,000 pieces** spanning 5,000 years of human history.
 
-### Deployment & Finalisation
-- Fully updated documentation
-- Deployed and accessible via a live URL
+Built with vanilla HTML, CSS, and JavaScript. No frameworks, no build steps, no dependencies.
 
-## Technologies
-- HTML
-- CSS
-- JavaScript
-- Metropolitan Museum of Art REST API
+---
 
-## Setup and Running
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| **🔍 Search** | Search across the full Met collection by keyword |
+| **🎨 Artwork Cards** | Display image, title, artist, department, and year |
+| **⚡ Parallel Fetching** | Batch fetch details using `Promise.all()` |
+| **🏛️ Department Filter** | Filter by department (Egyptian Art, Modern Art, Asian Art, etc.) |
+| **📅 Year Sorting** | Sort by creation year (oldest → newest / newest → oldest) |
+| **🔎 Local Search** | Search within loaded results by title or artist |
+| **🌙 Dark Mode** | Toggle with preference saved via `localStorage` |
+| **📱 Responsive** | Grid layout adapts to mobile, tablet, and desktop |
+
+---
+
+## 🏗️ Architecture
+
+```
+┌─────────────────────────────────────────┐
+│              Browser                     │
+│  ┌─────────────┐  ┌─────────────────┐  │
+│  │  index.html │  │   style.css     │  │
+│  │  (Markup)   │  │  (Dark/Light)   │  │
+│  └──────┬──────┘  └─────────────────┘  │
+│         │                               │
+│         ▼                               │
+│  ┌─────────────┐                        │
+│  │  script.js  │◄── Promise.all()      │
+│  │  (Logic)    │    parallel fetch     │
+│  └──────┬──────┘                        │
+│         │                               │
+│         ▼                               │
+│  ┌─────────────────────────────────┐   │
+│  │  Met Museum Collection API      │   │
+│  │  collectionapi.metmuseum.org    │   │
+│  └─────────────────────────────────┘   │
+└─────────────────────────────────────────┘
+```
+
+---
+
+## 🚀 Quick Start
+
 No installation or build steps required.
 
-1. Clone the repository:
-   git clone https://github.com/vishal-k-crypto/art-vault
+```bash
+git clone https://github.com/vishal-k-crypto/art-vault.git
+cd art-vault
+# Open index.html in any modern browser
+open index.html
+```
 
-2. Open index.html in any modern web browser.
+---
 
-That's it — the app runs entirely in the browser with no dependencies.
+## 📁 Project Structure
+
+```
+art-vault/
+├── index.html      # Main page structure
+├── style.css       # Styling + dark/light mode
+├── script.js       # Search, filter, sort logic
+└── README.md       # This file
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| **HTML5** | Semantic markup |
+| **CSS3** | Grid layout, responsive design, dark mode |
+| **Vanilla JS** | API calls, DOM manipulation, localStorage |
+| **Met Museum API** | Open REST API — no auth required |
+
+---
+
+## 📜 License
+
+MIT License — see [LICENSE](LICENSE) for details.
+
+---
+
+<div align="center">
+
+**Built with** 🏛️ **The Met API** · 🎨 **Vanilla JS** · 🌙 **Dark Mode**
+
+</div>
